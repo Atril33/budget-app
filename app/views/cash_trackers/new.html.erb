@@ -1,0 +1,18 @@
+<%= form_with(model: [@category, @cash_tracker], url: category_cash_trackers_path(@category)) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+  <%= f.hidden_field :category_id, value: @category.id %>
+  <div>
+    <%= f.label :category_id %>
+    <%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }, include_blank: true %>
+  </div>
+  <div>
+    <%= f.submit 'Create Cash Tracker' %>
+  </div>
+<% end %>

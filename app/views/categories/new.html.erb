@@ -1,0 +1,13 @@
+<%= form_with model: @category do |f| %>
+  <div>
+    <%= f.label :name, "Payment Name" %>
+    <%= f.text_field :name, placeholder: "Enter Payment Name" %>
+  </div>
+
+  <div>
+    <%= f.label :icon, "Category Icon" %>
+    <%= f.file_field :icon, accept: 'image/*' %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
