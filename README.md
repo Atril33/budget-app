@@ -63,7 +63,7 @@
 
  - [Live Demo Link](http://145.14.158.81)
 
- - [Presentation Loom Video](www.google.com)
+ - [Presentation Video](https://drive.google.com/file/d/1xb0cRTXeEnsZgeAm3SmDRLUVRXkPnIQX/view)
 
 <!-- GETTING STARTED -->
 
