@@ -17,13 +17,13 @@ RSpec.describe 'Categories #index page', type: :feature do
   end
 
   it 'I can see a Payments text' do
-    expect(page).to have_content("Payments")
+    expect(page).to have_content('Payments')
   end
 
   it 'I can see a Log Out button' do
-    expect(page).to have_content("Log out")
+    expect(page).to have_content('Log out')
   end
-  
+
   it 'I can see all categories all contents' do
     @user.categories.each do |category|
       expect(page).to have_content(category.name)
@@ -32,10 +32,10 @@ RSpec.describe 'Categories #index page', type: :feature do
   end
 
   it 'I can see a Add Payment button' do
-    expect(page).to have_content("Add Payment")
+    expect(page).to have_content('Add Payment')
   end
 
- it 'When I click to Add Payment button, it redirects me Add Payment Page.' do
+  it 'When I click to Add Payment button, it redirects me Add Payment Page.' do
     click_on 'Add Payment'
     expect(page).to have_current_path(new_category_path)
   end

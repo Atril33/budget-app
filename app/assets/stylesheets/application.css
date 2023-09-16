@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -109,7 +110,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px;
 }
 
 .payment-button-container {
@@ -121,16 +122,16 @@ h2 {
 }
 
 .payment-btn {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    padding: 15px 0;
-    border: 1px solid #fff;
-    text-align: center;
-    border-radius: 2px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  padding: 15px 0;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 2px;
 }
 
 .left-category-container {
@@ -158,7 +159,7 @@ h2 {
 .category-text-items {
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .category-name,
@@ -193,7 +194,7 @@ h2 {
 }
 
 .total-amount {
- margin-right: 20px;
+  margin-right: 20px;
 }
 
 .transcation-amount,
@@ -216,6 +217,29 @@ h2 {
 .alert {
   position: absolute;
   background: rgba(0, 128, 0, 0.425);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  animation: hideslightly 5s forwards;
+}
+
+.notice {
+  background: rgba(44, 235, 44, 0.459);
+}
+
+.alert {
+  background: red;
+}
+
+@keyframes hideslightly {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .logout-btn {
