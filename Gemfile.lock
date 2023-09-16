@@ -268,8 +268,9 @@ GEM
       nokogiri (~> 1.8)
     zeitwerk (2.6.11)
 
-PLATFORMS
-  x64-mingw-ucrt
+  ruby
+  x86-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
