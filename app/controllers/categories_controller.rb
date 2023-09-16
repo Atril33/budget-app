@@ -3,8 +3,8 @@ class CategoriesController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @categories = Category.all
-    authorize! :read, Category # Authorize the ability to read Category
+    @categories = Category.includes(:cash_trackers).all
+    authorize! :read, Category 
   end
   
       def show
