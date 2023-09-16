@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
   
       def show
-        @category = Category.find(params[:id])
+        @category = Category.includes(:cash_trackers).find(params[:id])
         @cash_tracker = @category.cash_trackers
         @total_amount = @category.cash_trackers.sum(&:amount)
       end
