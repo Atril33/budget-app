@@ -1,6 +1,6 @@
 <img src="https://github.com/Atril33/rails_blog_app/blob/dev/my-logo.png" width="100px" />
 <div align="center">
-  <img src="https://github.com/Atril33/budget-app/blob/logic-done/my-preview-image.png" width="550px" >
+  <img src="https://github.com/Atril33/budget-app/blob/logic-done/Preview%20Image.png" />
   </div>
 <!-- TABLE OF CONTENTS -->
 
