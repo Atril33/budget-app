@@ -1,1 +1,31 @@
-<%= @category.id %>
+<nav>
+<%= link_to root_path do %>
+<div class="back-arrow"></div>
+<% end %>
+<h1>TRANSACTIONS</h1>
+<h2><%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "from-submit-btn logout-btn" %></h2>
+</nav>
+<div class="total-container">
+<h3 class="total-text">Total:</h3>
+<h3 class="total-amount">$<%= @total_amount %></h3>
+</div>
+<div class="transcation-container">
+
+<% @cash_tracker.each do |cash_tracker| %>
+<div class="transcation-item">
+<div>
+  <span class="transcation-name"><%= cash_tracker.name %></span>
+</div>
+<div>
+  <span class="transcation-amount"><%= cash_tracker.amount %>$</span>
+</div>
+
+</div>
+<% end %>
+
+</div>
+
+<div class="payment-button-container">
+<%= link_to "Add Transaction
+", new_category_cash_tracker_path(@category), class: "payment-btn" %>
+</div>

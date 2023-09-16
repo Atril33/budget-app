@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :name, presence: true
-  validates :photo, presence: true
         
   has_many :categories
   has_many :cash_trackers

@@ -1,15 +1,266 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background: #f0f2f1;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+nav {
+  background-image: linear-gradient(to top, #3676bd, #3167a8);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-arrow {
+  background-image: url("back_arrow.png");
+  width: 30px;
+  height: 50px;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+
+h1,
+h2 {
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+h2 {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.register-container,
+.category-new-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.small-container,
+.category-new-small-container {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #dfdbdb;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.input-field {
+  width: 95%;
+  padding: 10px 7px;
+  height: 30px;
+  border: none;
+  border-top: 1.5px solid #f1f1f1;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.last-field {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.from-submit-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #848a87;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.category-container,
+.transcation-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.category-item,
+.transcation-item {
+  width: 97%;
+  padding: 15px 0;
+  height: 50px;
+  background: #fff;
+  margin: 8px 0;
+  border: 1px solid #dfdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.payment-button-container {
+  width: 100%;
+  height: 70px;
+  background: #60b524;
+  position: fixed;
+  bottom: 0%;
+}
+
+.payment-btn {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    padding: 15px 0;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.left-category-container {
+  display: flex;
+  margin-left: 10px;
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid #dfdbdb;
+  margin-right: 10px;
+}
+
+.icon-image {
+  width: 38px;
+  height: 38px;
+}
+
+.category-text-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.category-name,
+.category-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: #afafaf;
+}
+
+.category-date {
+  font-size: 13px;
+}
+
+.custom-select {
+  height: 50px;
+  font-size: 15px;
+}
+
+.total-container {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-text,
+.total-amount {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.total-amount {
+ margin-right: 20px;
+}
+
+.transcation-amount,
+.transcation-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #afafaf;
+}
+
+.transcation-name {
+  margin-left: 10px;
+}
+
+.transcation-amount {
+  margin-right: 10px;
+  color: #000;
+}
+
+.notice,
+.alert {
+  position: absolute;
+  background: rgba(0, 128, 0, 0.425);
+}
+
+.logout-btn {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-logo {
+  font-family: 'Luckiest Guy', cursive;
+  color: #080808;
+  font-size: 40px;
+  -webkit-text-stroke: 1.5px #fff;
+}
+
+.register-btn-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0%;
+}
+
+.login-btn {
+  width: 98%;
+  background: #3778c2;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.sign-up {
+  background: #fff;
+  color: #000;
+}

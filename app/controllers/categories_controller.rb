@@ -1,11 +1,18 @@
 class CategoriesController < ApplicationController
-    def index
-      @categories = Category.all
-    end
-
-    def show
-      @category = Category.find(params[:id])
-    end
+  before_action :authenticate_user!
+  load_and_authorize_resource
+  
+  def index
+    @categories = Category.all
+    authorize! :read, Category # Authorize the ability to read Category
+  end
+  
+      def show
+        @category = Category.find(params[:id])
+        @cash_tracker = @category.cash_trackers
+        @total_amount = @category.cash_trackers.sum(&:amount)
+      end
+      
 
     def new
       @category = Category.new
@@ -13,7 +20,6 @@ class CategoriesController < ApplicationController
 
     def create
       @category = Category.new(category_params)
-      @category.user = current_user
     
       if @category.save 
         flash[:notice] = 'Category is Created'
@@ -24,6 +30,7 @@ class CategoriesController < ApplicationController
       end
     end
     
+
     def destroy
       @category = Category.find(params[:id])
       @category.destroy
@@ -31,6 +38,6 @@ class CategoriesController < ApplicationController
     end
     
     def category_params
-      params.require(:category).permit(:name, :icon).merge(user: current_user)
+      params.require(:category).permit(:name, :icon).merge(user_id: current_user.id)
     end
   end

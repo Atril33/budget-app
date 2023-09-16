@@ -1,18 +1,52 @@
+<nav>
+<%= link_to category_path(@category) do %>
+<div class="back-arrow"></div>
+<% end %>
+<h1>Add Transaction</h1>
+<h2><%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "from-submit-btn logout-btn" %></h2>
+</nav>
+<div class="category-new-container">
+<div class="category-new-small-container">
 <%= form_with(model: [@category, @cash_tracker], url: category_cash_trackers_path(@category)) do |f| %>
   <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Enter Transaction Name", class: "input-field" %>
   </div>
   <div>
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, placeholder: "Enter Transaction Amount", class: "input-field" %>
   </div>
-  <%= f.hidden_field :category_id, value: @category.id %>
+
+  <% @icon_options = [] %>
+
+  <% @select_option.each do |option| %>
+  <% if can? :read, option %>
+    <% # Assuming `option` is an object with a `name` and `id` attribute %>
+    <% @icon_options << [option.name, option.id] %>
+    <% # Add more image options here if needed %>
+    <% end %>
+  <% end %>
+
   <div>
-    <%= f.label :category_id %>
-    <%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }, include_blank: true %>
+    <%= f.select :categories_id, options_for_select(@icon_options), {}, class: 'custom-select input-field last-field', id: 'category-select' %>
   </div>
+
   <div>
-    <%= f.submit 'Create Cash Tracker' %>
+    <%= f.submit class: "from-submit-btn" %>
   </div>
 <% end %>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#category-select').on('change', function() {
+    console.log('Category selection changed.'); // Add this line
+    var selectedCategoryId = $(this).val();
+    if (selectedCategoryId) {
+      var form = $(this).closest('form');
+      var newAction = form.attr('action').replace(/\/\d+/, '/' + selectedCategoryId);
+      form.attr('action', newAction);
+    }
+  });
+});
+
+</script>
