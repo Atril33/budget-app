@@ -1,0 +1,26 @@
+<nav>
+<%= link_to root_path do %>
+<div class="back-arrow"></div>
+<% end %>
+<h1>Login</h1>
+<h2>Next</h2>
+</nav>
+
+<div class="register-container">
+<div class="small-container">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email,  placeholder: "Email", class: "input-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, placeholder: "Password", class: "input-field last-field" %>
+  </div>
+
+  <div>
+    <%= f.submit "Login", class: "from-submit-btn" %>
+  </div>
+<% end %>
+
+</div>
+</div>

@@ -1,0 +1,36 @@
+<nav>
+<%= link_to categories_path do %>
+<div class="back-arrow"></div>
+<% end %>
+<h1>Add Payment</h1>
+<h2>Next</h2>
+</nav>
+<div class="category-new-container">
+<div class="category-new-small-container">
+<%= form_with model: @category do |f| %>
+  <div>
+
+    <%= f.text_field :name, placeholder: "Enter Payment Name", class: "input-field" %>
+  </div>
+
+<% @icon_options = [
+  ['Shopping', 'https://img.icons8.com/?size=50&id=JWv_lqo5fs4F&format=png'],
+  ['Traveling', 'https://img.icons8.com/?size=50&id=108778&format=png'],
+  ['Technology', 'https://img.icons8.com/?size=50&id=104090&format=png'],
+  ['Health and Fitness', 'https://img.icons8.com/?size=50&id=40521&format=png'],
+  ['Food and Dining', 'https://img.icons8.com/?size=50&id=118431&format=png'],
+  ['Entertainment', 'https://img.icons8.com/?size=50&id=12012&format=png'],
+  ['Finance', 'https://img.icons8.com/?size=50&id=13009&format=png'],
+  ['Education', 'https://img.icons8.com/?size=50&id=vo1XcGH8QAag&format=png'],
+  # Add more image options here
+] %>
+
+<div>
+  <%= f.select :icon, options_for_select(@icon_options), {}, class: 'custom-select input-field last-field' %>
+</div>
+
+
+  <%= f.submit class: "from-submit-btn" %>
+<% end %>
+</div>
+</div>
