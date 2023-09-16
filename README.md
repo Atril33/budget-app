@@ -1,7 +1,9 @@
+<img src="https://github.com/Atril33/rails_blog_app/blob/dev/my-logo.png" width="100px" />
 <div align="center">
-  <img src="https://github.com/Atril33/rails_blog_app/blob/dev/my-logo.png" />
+  
   </div>
 <!-- TABLE OF CONTENTS -->
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -22,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  BLOG APP <a name='about-project'></a>
+# 📖  Budget App <a name='about-project'></a>
 
-> Rails Blog App is a Ruby on Rails web application that allows users to create, manage, and interact with blog posts. Users can create their own blog posts, update existing ones, and delete posts if needed. The application provides a user-friendly interface for writing and publishing blog content. Built using Ruby and Ruby on Rails.
+> The budget app is a straightforward tool to keep track of your daily expenses in different categories. It's built using Ruby and is a complete app that covers both the front-end and back-end
 
 ## 🛠 Built With <a name='built-with'></a>
 
@@ -52,8 +54,7 @@
 - [x] Forms
 - [x] Add Devise
 - [x] Add authorization rules
-- [x] Add API endpoints
-- [x] Integration specs for Views and fixing n+1 problems
+- [x] Integration specs for Views and fixing n+1 problems 
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
@@ -79,7 +80,7 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-https://github.com/Atril33/rails_blog_app.git
+https://github.com/Atril33/budget-app.git
 
 ```
 
@@ -107,7 +108,11 @@ To run the project, open your project in your terminal
 ```sh
  rails server
 ```
+### Run Tests
 
+```sh
+rspec spec
+```
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
@@ -119,13 +124,6 @@ To run the project, open your project in your terminal
 - GitHub: [@githubhandle](https://github.com/Atril33)
 - Twitter: [@twitterhandle](https://twitter.com/AtrilSyed)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/syed-atril-831696248/)
-- Facebook [Facebook](https://web.facebook.com/profile.php?id=100073724910623)
-
-👤 **Henry Odongo**
-
-- GitHub: [@githubhandle](https://github.com/Odongo006)
-- Twitter: [@twitterhandle](https://twitter.com/HenryOdongo007)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-odongo/)
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
@@ -133,7 +131,7 @@ To run the project, open your project in your terminal
 
 ## 🔭 Future Features <a name='future-features'></a>
 
-- [ ] Add Styling In Rails Blog App
+- [ ] Add More Features
 <!-- > Describe 1 - 3 features you will add to the project. -->
 
 
@@ -162,7 +160,9 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name='acknowledgements'></a>
 
-> I would like to say thanks to the Microverse team.
+> I would like to thank Microverse for this opportunity.
+
+Original design idea by [Gregoire Vella in Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
@@ -170,7 +170,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name='license'></a>
 
-This project is [MIT](https://github.com/Atril33/rails_blog_app/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/Atril33/budget-app/blob/dev/LICENSE) licensed.
 
 <p align='right'>(<a href='#readme-top'>back to top</a>)</p>
 
