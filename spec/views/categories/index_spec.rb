@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-
 RSpec.describe 'Categories #index page', type: :feature do
   before(:each) do
     @user = User.create(name: 'atril', email: 'syedatril@gmail.com', password: 'syedatril333')

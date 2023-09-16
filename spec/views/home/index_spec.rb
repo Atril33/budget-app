@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-
 RSpec.describe 'Categories #index page', type: :feature do
   before(:each) do
     visit home_path
@@ -14,7 +13,6 @@ RSpec.describe 'Categories #index page', type: :feature do
   it 'I can see a Login button' do
     expect(page).to have_content('Login')
   end
-
 
   it 'I can see a Sign Up button' do
     expect(page).to have_content('Sign Up')
